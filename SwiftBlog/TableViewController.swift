@@ -125,7 +125,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         array.removeLast()
         print(array.count)
 
-        var closureVar = { array.removeLast() }
+        let closureVar = { array.removeLast() }
         print(array.count)
 
         closureVar()
