@@ -1,0 +1,38 @@
+NSURLConnection                                                                                             | NSURLSession
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDelegate            connectionShouldUseCredentialStorage:                                    |
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDelegate            connection:willSendRequestForAuthenticationChallenge:                    | NSURLSessionDelegate            URLSession:didReceiveChallenge:completionHandler:
+                                                                                                            | NSURLSessionTaskDelegate        URLSession:task:didReceiveChallenge:completionHandler:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDelegate            connection:willCacheResponse:                                            | NSURLSessionDataDelegate        URLSession:dataTask:willCacheResponse:completionHandler:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDelegate            connection:didFailWithError:                                             | NSURLSessionTaskDelegate        URLSession:task:didCompleteWithError:
+NSURLConnectionDataDelegate        connectionDidFinishLoading:                                              |
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDataDelegate        connection:willSendRequest:redirectResponse:                             | NSURLSessionTaskDelegate        URLSession:willPerformHTTPRedirection:newRequest:completionHandler:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDataDelegate        connection:didReceiveResponse:                                           | NSURLSessionDataDelegate        URLSession:dataTask:didReceiveResponse:completionHandler:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDataDelegate        connection:didReceiveData:                                               | NSURLSessionDataDelegate        URLSession:dataTask:didReceiveData:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDataDelegate        connection:needNewBodyStream:                                            |
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDataDelegate        connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:  |
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDownloadDelegate    connection:didWriteData:totalBytesWritten:expectedTotalBytes:            | NSURLSessionTaskDelegate        URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDownloadDelegate    connectionDidResumeDownloading:totalBytesWritten:expectedTotalBytes:     |
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+NSURLConnectionDownloadDelegate    connectionDidFinishDownloading:destinationURL:                           | NSURLSessionDownloadDelegate    URLSession:downloadTask:didFinishDownloadingToURL:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                            | NSURLSessionDelegate            URLSession:didBecomeInvalidWithError:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                            | NSURLSessionDataDelegate        URLSession:dataTask:didBecomeDownloadTask:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                            | NSURLSessionDataDelegate        URLSessionDidFinishEventsForBackgroundURLSession:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                            | NSURLSessionDownloadDelegate    URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesWritten:totalBytesExpectedToWrite:
+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                            | NSURLSessionDownloadDelegate    URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:
+
