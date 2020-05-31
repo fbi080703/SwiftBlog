@@ -16,6 +16,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         UIApplication.shared.statusBarStyle = .lightContent
         
+        var hitendra = Person(name: "Hitendra Solanki",
+                              gender: "Male",
+                              birthDate: "2nd Oct 1991",
+                              birthPlace: "Gujarat, India",
+                              height: "5.9 ft",
+                              weight: "85kg",
+                              phone: "+91 90333-71772",
+                              email: "hitendra.developer@gmail.com",
+                              streeAddress: "52nd Godrej Street",
+                              zipCode: "380015",
+                              city: "Ahmedabad",
+                              companyName: "Fortune 500",
+                              designation: "Software architect",
+                              annualIncome: "45,000 USD")
+        
+        //use of Person object
+        print("\(hitendra.name) works in \(hitendra.companyName) compay as a \(hitendra.designation).")
+        
+        // use builder
+        var builderHitendra = Person() //person with empty details
+        let personBuilder = PersonBuilder(person: builderHitendra)
+        
+        builderHitendra = personBuilder
+          .personalInfo
+            .nameIs("Hitendra Solanki")
+            .genderIs("Male")
+            .bornOn("2nd Oct 1991")
+            .bornAt("Gujarat, India")
+            .havingHeight("5.9 ft")
+            .havingWeight("85 kg")
+          .contacts
+            .hasPhone("+91 90333-71772")
+            .hasEmail("hitendra.developer@gmail.com")
+          .lives
+            .at("52nd Godrej Street")
+            .inCity("Ahmedabad")
+            .withZipCode("380015")
+          .build()
+        
+        //use of Person object
+        print("\(builderHitendra.name) has contact number \(builderHitendra.phone) and email \(builderHitendra.email)")
+        
+        //later on when we have company details ready for the person
+        /*hitendra = personBuilder
+          .works
+            .asA("Software architect")
+            .inCompany("Fortune 500")
+            .hasAnnualEarning("45,000 USD")
+          .build()
+        
+        //use of Person object with update info
+        print("\(hitendra.name) works in \(hitendra.companyName) compay as a \(hitendra.designation).")*/
+        
+        
+        var p = Person() //person with empty details
+        let builder = PersonProtocolBuilder(object: p)
+        
+        p = builder.personalInfo.nameIs("ddd").builder()
+        
+         print("Person objec \(p.name).")
+        
+        
         return true
     }
 
