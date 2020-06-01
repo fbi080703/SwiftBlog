@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2B0D980E24826D2B00673E67 /* SwiftDiscardableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D980D24826D2B00673E67 /* SwiftDiscardableResult.swift */; };
 		2B0D981024827F6E00673E67 /* BuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D980F24827F6E00673E67 /* BuilderExample.swift */; };
+		2B0D981224849E2B00673E67 /* SwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D981124849E2B00673E67 /* SwiftClass.swift */; };
+		2B0D981424849E5F00673E67 /* SwiftClassDynamicExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */; };
 		2B5CB5032465083500DB3850 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CB5022465083400DB3850 /* Test.swift */; };
 		AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17275F19B8E32D00565259 /* AppDelegate.swift */; };
 		AE17276219B8E32D00565259 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17276119B8E32D00565259 /* TableViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		2B0D980D24826D2B00673E67 /* SwiftDiscardableResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDiscardableResult.swift; sourceTree = "<group>"; };
 		2B0D980F24827F6E00673E67 /* BuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderExample.swift; sourceTree = "<group>"; };
+		2B0D981124849E2B00673E67 /* SwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftClass.swift; sourceTree = "<group>"; };
+		2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassDynamicExample.swift; sourceTree = "<group>"; };
 		2B5CB5022465083400DB3850 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		AE17275A19B8E32D00565259 /* SwiftBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE17275E19B8E32D00565259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,12 +72,14 @@
 				2B5CB5022465083400DB3850 /* Test.swift */,
 				AE17275F19B8E32D00565259 /* AppDelegate.swift */,
 				AE17276119B8E32D00565259 /* TableViewController.swift */,
+				2B0D981124849E2B00673E67 /* SwiftClass.swift */,
 				AE17278A19B8F48100565259 /* WebviewPost.swift */,
 				AE17276319B8E32D00565259 /* Main.storyboard */,
 				AE17278C19B8F5C700565259 /* NavigationBarBackground.png */,
 				AE17275D19B8E32D00565259 /* Supporting Files */,
 				2B0D980D24826D2B00673E67 /* SwiftDiscardableResult.swift */,
 				2B0D980F24827F6E00673E67 /* BuilderExample.swift */,
+				2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -164,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0D981224849E2B00673E67 /* SwiftClass.swift in Sources */,
 				2B0D981024827F6E00673E67 /* BuilderExample.swift in Sources */,
 				AE17276219B8E32D00565259 /* TableViewController.swift in Sources */,
 				2B5CB5032465083500DB3850 /* Test.swift in Sources */,
 				AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */,
+				2B0D981424849E5F00673E67 /* SwiftClassDynamicExample.swift in Sources */,
 				AE17278B19B8F48100565259 /* WebviewPost.swift in Sources */,
 				2B0D980E24826D2B00673E67 /* SwiftDiscardableResult.swift in Sources */,
 			);
