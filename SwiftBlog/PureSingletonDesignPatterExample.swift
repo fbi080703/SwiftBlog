@@ -6,6 +6,8 @@
 //  Copyright © 2020 Patrick Balestra. All rights reserved.
 //
 
+//https://medium.com/swift-programming/https-medium-com-hitendrahckr-part-2-singletone-desing-pattern-in-swift-by-tutorials-the-power-of-oop-431314237b10
+
 import Foundation
 
 final class LogManager {
