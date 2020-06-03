@@ -23,6 +23,10 @@ final class SemiSingletonLogManager {
       func log(_ value: String...){
         //complex code to connect to the databaseURLEndpoint and send the value to server directly
      }
+    
+     func foo() -> [String] {
+       return [1].flatMap { String.init($0) }
+     }
 }
 
 /**
