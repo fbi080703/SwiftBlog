@@ -13,6 +13,7 @@
 		2B0D981424849E5F00673E67 /* SwiftClassDynamicExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */; };
 		2B0D98302485FEDB00673E67 /* PureSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */; };
 		2B0D9832248602A800673E67 /* SemiSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */; };
+		2B0D9834248635B000673E67 /* SwiftNewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */; };
 		2B5CB5032465083500DB3850 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CB5022465083400DB3850 /* Test.swift */; };
 		AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17275F19B8E32D00565259 /* AppDelegate.swift */; };
 		AE17276219B8E32D00565259 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17276119B8E32D00565259 /* TableViewController.swift */; };
@@ -30,6 +31,7 @@
 		2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassDynamicExample.swift; sourceTree = "<group>"; };
 		2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
 		2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
+		2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeatures.swift; sourceTree = "<group>"; };
 		2B5CB5022465083400DB3850 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		AE17275A19B8E32D00565259 /* SwiftBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE17275E19B8E32D00565259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */,
 				2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */,
 				2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */,
+				2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				AE17276219B8E32D00565259 /* TableViewController.swift in Sources */,
 				2B0D98302485FEDB00673E67 /* PureSingletonDesignPatterExample.swift in Sources */,
 				2B0D9832248602A800673E67 /* SemiSingletonDesignPatterExample.swift in Sources */,
+				2B0D9834248635B000673E67 /* SwiftNewFeatures.swift in Sources */,
 				2B5CB5032465083500DB3850 /* Test.swift in Sources */,
 				AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */,
 				2B0D981424849E5F00673E67 /* SwiftClassDynamicExample.swift in Sources */,

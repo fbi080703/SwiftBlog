@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         UIApplication.shared.statusBarStyle = .lightContent
         
-        var hitendra = Person(name: "Hitendra Solanki",
+        /*var hitendra = Person(name: "Hitendra Solanki",
                               gender: "Male",
                               birthDate: "2nd Oct 1991",
                               birthPlace: "Gujarat, India",
@@ -75,8 +75,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         p = builder.personalInfo.nameIs("ddd").builder()
         
-         print("Person objec \(p.name).")
+         print("Person objec \(p.name).") */
         
+        
+        //let throttledNetworkManager = ThrottledNetworkManager()
+        //throttledNetworkManager.printDebugData()
+        
+        //var stepCounter = Point(500, 4434)
+        //stepCounter.y = 54333
         
         return true
     }
