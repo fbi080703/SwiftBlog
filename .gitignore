@@ -3,3 +3,6 @@ xcuserdata
 project.xcworkspace
 /build
 /Carthage/Build
+lldb-commands-map.png
+NSURLConnection|NSURLSession.txt
+canonical-list-of-xcode-environment-variables.txt
