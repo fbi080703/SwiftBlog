@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ExamplePoint {
     var x: Int
@@ -95,6 +96,52 @@ class AdapterPatternExample {
         //get points from adapter to draw
         let points = adapter.points()
         drawingPad.draw(points: points) //it will draw total 9 dots on console
+        AnyObject
     }
     
+}
+
+//https://medium.com/swift-india/protocol-the-power-of-swift-45e97f6531f9
+/*
+
+//example one
+ 
+typealias HSCompositeTableViewDatasourceDelegate = (UITableViewDataSource & UITableViewDelegate)
+
+class ContactListViewController: UIViewController {
+    //ContactListViewController implementation
+}
+
+extension ContactListViewController: HSCompositeTableViewDatasourceDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // UITableViewDataSource
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //UITableViewDelegate
+        return UITableViewCell.init()
+    }
+    
+    //implementation of methods releated to UITableViewDataSource and UITableViewDelegate
+}*/
+
+//example two
+protocol HSCombineTableViewDatasourceDelegate : UITableViewDataSource, UITableViewDelegate { } //empty protocol
+
+class ContactListViewController: UIViewController {
+    //ContactListViewController implementation
+}
+
+extension ContactListViewController: HSCombineTableViewDatasourceDelegate {
+    //implementation of methods releated to UITableViewDataSource and UITableViewDelegate
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // UITableViewDataSource
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //UITableViewDelegate
+        return UITableViewCell.init()
+    }
 }
