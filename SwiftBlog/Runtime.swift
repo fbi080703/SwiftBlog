@@ -56,6 +56,9 @@
 //                }
 //            }
 //
+
+//https://stackoverflow.com/questions/34415028/how-to-list-all-classes-conforming-to-protocol-in-swift
+
 import Foundation
 
 class Runtime {
