@@ -96,7 +96,6 @@ class AdapterPatternExample {
         //get points from adapter to draw
         let points = adapter.points()
         drawingPad.draw(points: points) //it will draw total 9 dots on console
-        AnyObject
     }
     
 }

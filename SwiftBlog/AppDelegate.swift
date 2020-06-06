@@ -84,6 +84,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //var stepCounter = Point(500, 4434)
         //stepCounter.y = 54333
         
+       let example =  ClosureExample.init()
+       //example.takesAClosure()
+        example.captureValue()
+        
         return true
     }
 
