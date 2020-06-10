@@ -75,8 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         p = builder.personalInfo.nameIs("ddd").builder()
         
-         print("Person objec \(p.name).") */
-        
+        print("Person objec \(p.name).") */
         
         //let throttledNetworkManager = ThrottledNetworkManager()
         //throttledNetworkManager.printDebugData()
@@ -84,9 +83,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //var stepCounter = Point(500, 4434)
         //stepCounter.y = 54333
         
-       let example =  ClosureExample.init()
+       //let example =  ClosureExample.init()
        //example.takesAClosure()
-        example.captureValue()
+       //example.captureValue()
+        
+        /**
+         将 totalSteps 的值设置为 200
+         增加了 200 步
+         将 totalSteps 的值设置为 360
+         增加了 160 步
+         将 totalSteps 的值设置为 896
+         增加了 536 步
+         */
+        let stepCounter = StepCounter()
+        stepCounter.totalSteps = 200
+        
+//        stepCounter.totalSteps = 360
+//        stepCounter.totalSteps = 896
+        
+        
+//        var rectangle = SmallRectangle()
+//        print(rectangle.height)
+//        rectangle.height = 10
+//        print(rectangle.height)
+//        rectangle.height = 24
+//        print(rectangle.height)
+        
+        //var zeroRectangle = ZeroRectangle()
+        //print(zeroRectangle.height, zeroRectangle.width)
         
         return true
     }
