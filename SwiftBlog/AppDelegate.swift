@@ -112,6 +112,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //var zeroRectangle = ZeroRectangle()
         //print(zeroRectangle.height, zeroRectangle.width)
         
+        //let mm = Planet.earth
+        
+        //let mars = Planet[5]
+        //print(mars)
+        
+       /*let train = Train.init()
+       train.defaultType = "dfddfd"
+       print(train.defaultType)*/
+        
+        
         return true
     }
 
