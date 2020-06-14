@@ -8,6 +8,7 @@
 
 import Foundation
 
+//构造器
 
 struct Celsius {
     var temperatureInCelsius: Double

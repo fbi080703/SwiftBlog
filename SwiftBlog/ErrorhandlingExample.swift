@@ -8,6 +8,7 @@
 
 import Foundation
 
+//错误处理
 
 enum VendingMachineError: Error {
     case invalidSelection                     //选择无效

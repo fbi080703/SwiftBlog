@@ -8,6 +8,7 @@
 
 import Foundation
 
+//扩展
 
 extension Double {
     var km: Double { return self * 1_000.0 }

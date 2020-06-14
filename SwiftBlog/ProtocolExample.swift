@@ -8,6 +8,8 @@
 
 import Foundation
 
+//协议
+
 //协议的语法
 protocol SomeProtocolExample {
     // 这里是协议的定义部分
@@ -440,3 +442,5 @@ extension Collection where Element: Equatable {
 }
 
 //如果一个遵循的类型满足了为同一方法或属性提供实现的多个限制型扩展的要求， Swift 会使用最匹配限制的实现。
+
+
