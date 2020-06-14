@@ -23,6 +23,10 @@
 		2BCC35862490847B00E8B22C /* SubscriptExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC35852490847B00E8B22C /* SubscriptExample.swift */; };
 		2BCC35A52490B56900E8B22C /* InheritExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC35A42490B56900E8B22C /* InheritExample.swift */; };
 		2BCC35A72490C7FF00E8B22C /* ConstructExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC35A62490C7FF00E8B22C /* ConstructExample.swift */; };
+		2BCC3AF42492246F00E8B22C /* ErrorhandlingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3AF32492246F00E8B22C /* ErrorhandlingExample.swift */; };
+		2BCC3EB62493334600E8B22C /* NestedExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EB52493334600E8B22C /* NestedExample.swift */; };
+		2BCC3EB8249351CA00E8B22C /* ExtensionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EB7249351CA00E8B22C /* ExtensionExample.swift */; };
+		2BCC3EBA2495C4CB00E8B22C /* ProtocolExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */; };
 		AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17275F19B8E32D00565259 /* AppDelegate.swift */; };
 		AE17276219B8E32D00565259 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17276119B8E32D00565259 /* TableViewController.swift */; };
 		AE17276519B8E32D00565259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE17276319B8E32D00565259 /* Main.storyboard */; };
@@ -49,6 +53,10 @@
 		2BCC35852490847B00E8B22C /* SubscriptExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptExample.swift; sourceTree = "<group>"; };
 		2BCC35A42490B56900E8B22C /* InheritExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritExample.swift; sourceTree = "<group>"; };
 		2BCC35A62490C7FF00E8B22C /* ConstructExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructExample.swift; sourceTree = "<group>"; };
+		2BCC3AF32492246F00E8B22C /* ErrorhandlingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorhandlingExample.swift; sourceTree = "<group>"; };
+		2BCC3EB52493334600E8B22C /* NestedExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedExample.swift; sourceTree = "<group>"; };
+		2BCC3EB7249351CA00E8B22C /* ExtensionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionExample.swift; sourceTree = "<group>"; };
+		2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExample.swift; sourceTree = "<group>"; };
 		AE17275A19B8E32D00565259 /* SwiftBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE17275E19B8E32D00565259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE17275F19B8E32D00565259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +121,10 @@
 				2BCC35852490847B00E8B22C /* SubscriptExample.swift */,
 				2BCC35A42490B56900E8B22C /* InheritExample.swift */,
 				2BCC35A62490C7FF00E8B22C /* ConstructExample.swift */,
+				2BCC3AF32492246F00E8B22C /* ErrorhandlingExample.swift */,
+				2BCC3EB52493334600E8B22C /* NestedExample.swift */,
+				2BCC3EB7249351CA00E8B22C /* ExtensionExample.swift */,
+				2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -207,12 +219,16 @@
 				2BCC35862490847B00E8B22C /* SubscriptExample.swift in Sources */,
 				2B0D981024827F6E00673E67 /* BuilderExample.swift in Sources */,
 				AE17276219B8E32D00565259 /* TableViewController.swift in Sources */,
+				2BCC3AF42492246F00E8B22C /* ErrorhandlingExample.swift in Sources */,
 				2B0D98302485FEDB00673E67 /* PureSingletonDesignPatterExample.swift in Sources */,
 				2B8499972487C52500BEB1AE /* Runtime.swift in Sources */,
 				2BCC35A52490B56900E8B22C /* InheritExample.swift in Sources */,
 				2B0D9832248602A800673E67 /* SemiSingletonDesignPatterExample.swift in Sources */,
 				2B0D9834248635B000673E67 /* SwiftNewFeatures.swift in Sources */,
+				2BCC3EB8249351CA00E8B22C /* ExtensionExample.swift in Sources */,
+				2BCC3EB62493334600E8B22C /* NestedExample.swift in Sources */,
 				2B5CB5032465083500DB3850 /* Test.swift in Sources */,
+				2BCC3EBA2495C4CB00E8B22C /* ProtocolExample.swift in Sources */,
 				2BCC2F9D248B3E9D00E8B22C /* ClosureExample.swift in Sources */,
 				2BCC35A72490C7FF00E8B22C /* ConstructExample.swift in Sources */,
 				AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */,

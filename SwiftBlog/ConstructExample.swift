@@ -165,6 +165,10 @@ class SomeRequiredClass {
         // 构造器的实现代码
     }
     
+    deinit {
+        // 执行析构过程
+    }
+    
 }
 
 //如果子类继承的构造器能满足必要构造器的要求，则无须在子类中显式提供必要构造器的实现
@@ -181,6 +185,10 @@ class SomeRequiredSubclass: SomeRequiredClass {
         // someValue 必须和 SomeType 类型相同
         return "someProperty"
     }() //注意闭包结尾的花括号后面接了一对空的小括号。这用来告诉 Swift 立即执行此闭包。如果你忽略了这对括号，相当于将闭包本身作为值赋值给了属性，而不是将闭包的返回值赋值给属性
+    
+    deinit {
+        // 执行析构过程
+    }
 }
 
 //通过闭包或函数设置属性的默认值 someProperty

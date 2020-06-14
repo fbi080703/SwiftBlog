@@ -6,6 +6,8 @@
 //  Copyright © 2020 Patrick Balestra. All rights reserved.
 //
 
+//闭包
+
 import Foundation
 
 /**

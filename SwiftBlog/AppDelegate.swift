@@ -121,8 +121,98 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        train.defaultType = "dfddfd"
        print(train.defaultType)*/
         
+        let someRequired = SomeRequiredSubclass()
+        print(addressOf(someRequired))
+        print(addressOf(someRequired.self))
+        //print(addressOf(object_getClass(someRequired)))
+        /*
+         object_getClass(someRequired)
+         object_getClass(object_getClass(someRequired))
+         object_getClass(object_getClass(object_getClass(someRequired)))
+         object_getClass(object_getClass(object_getClass(object_getClass(someRequired))))
+         
+         (lldb) p/x object_getClass(someRequired)
+         (AnyClass?) $R0 = 0x00000001004915d0 SwiftBlog.SomeRequiredSubclass
+         (lldb) p/x object_getClass(object_getClass(someRequired))
+         (AnyClass?) $R2 = 0x0000000100cd27e0 0x0000000100cd27e0
+         (lldb) p/x object_getClass(object_getClass(object_getClass(someRequired)))
+         (AnyClass?) $R4 = 0x0000000100cd2808 0x0000000100cd2808
+         (lldb) p/x object_getClass(object_getClass(object_getClass(object_getClass(someRequired))))
+         (AnyClass?) $R6 = 0x0000000100cd2808 0x0000000100cd2808
+         
+         */
+        
+        /*
+        
+         Any 和 AnyObject 的类型转换
+         Swift 为不确定类型提供了两种特殊的类型别名：
+         Any 可以表示任何类型，包括函数类型。
+         AnyObject 可以表示任何类类型的实例。
+         只有当你确实需要它们的行为和功能时才使用 Any 和 AnyObject。最好还是在代码中指明需要使用的类型。
+         
+        var things = [Any]()
+
+        things.append(0)
+        things.append(0.0)
+        things.append(42)
+        things.append(3.14159)
+        things.append("hello")
+        things.append((3.0, 5.0))
+        //things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
+        things.append({ (name: String) -> String in "Hello, \(name)" })
+        
+        
+        for thing in things {
+            switch thing {
+            case 0 as Int:
+                print("zero as an Int")
+            case 0 as Double:
+                print("zero as a Double")
+            case let someInt as Int:
+                print("an integer value of \(someInt)")
+            case let someDouble as Double where someDouble > 0:
+                print("a positive double value of \(someDouble)")
+            case is Double:
+                print("some other double value that I don't want to print")
+            case let someString as String:
+                print("a string value of \"\(someString)\"")
+            case let (x, y) as (Double, Double):
+                print("an (x, y) point at \(x), \(y)")
+            /*case let movie as Movie:
+                print("a movie called \(movie.name), dir. \(movie.director)")*/
+            case let stringConverter as (String) -> String:
+                print(stringConverter("Michael"))
+            default:
+                print("something else")
+            }
+        }*/
+        //Point(x: 2.0, y: 2.0)
+        //let r = Rect.init(origin: ExtensionPoint(x: 0.0, y: 0.0), size: ExtensionSize(width: 5.0, height: 60.0))
+        
+//         var example = PersonExample(fullName: "PersonExample")
+//        example.fullName = "ExtensionPoint"
+//        print(example.fullName)
+        
+//        let tracker = DiceGameTracker()
+//        let game = SnakesAndLadders()
+//        game.delegate = tracker
+//        game.play()
         
         return true
+    }
+    
+    
+    /// 获取内存地址
+    /// http://stackoverflow.com/a/36539213/226791
+    ///
+    func addressOf(_ o: UnsafeRawPointer) -> String {
+        let addr = Int(bitPattern: o)
+        return String(format: "%p", addr)
+    }
+
+    func addressOf<T: AnyObject>(_ o: T) -> String {
+        let addr = unsafeBitCast(o, to: Int.self)
+        return String(format: "%p", addr)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -148,5 +238,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension String {
+    static func pointer(_ object: AnyObject?) -> String {
+        guard let object = object else { return "nil" }
+        let opaque: UnsafeMutableRawPointer = Unmanaged.passUnretained(object).toOpaque()
+        return String(describing: opaque)
+    }
 }
 
