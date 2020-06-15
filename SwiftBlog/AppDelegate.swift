@@ -198,6 +198,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        game.delegate = tracker
 //        game.play()
         
+        //var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+        //print(paragraph?.asHTML())
+        
+        /*内存安全*/
+        
+        var oscar = Player(name: "Oscar", health: 10, energy: 10)
+        var maria = Player(name: "Maria", health: 5, energy: 10)
+        oscar.shareHealth(with: &maria)  // 正常
+        
+        //Inout arguments are not allowed to alias each other
+        //Overlapping accesses to 'oscar', but modification requires exclusive access; consider copying to a local variable
+        //oscar.shareHealth(with: &oscar) //内存访问冲突
+        /*内存安全*/
+        
         return true
     }
     
@@ -245,6 +259,32 @@ extension String {
         guard let object = object else { return "nil" }
         let opaque: UnsafeMutableRawPointer = Unmanaged.passUnretained(object).toOpaque()
         return String(describing: opaque)
+    }
+}
+
+//任何情况下，对于元组元素的写访问都需要对整个元组发起写访问。这意味着对于 playerInfomation 发起的两个写访问重叠了，造成冲突
+var playerInformation = (health: 10, energy: 20)
+
+struct Player {
+    var name: String
+    var health: Int
+    var energy: Int
+
+    static let maxHealth = 10
+    mutating func restoreHealth() {
+        health = Player.maxHealth
+    }
+    
+    func balance(_ x: inout Int, _ y: inout Int) {
+        let sum = x + y
+        x = sum / 2
+        y = sum - x
+    }
+}
+
+extension Player {
+    mutating func shareHealth(with teammate: inout Player) {
+        balance(&teammate.health, &health)
     }
 }
 

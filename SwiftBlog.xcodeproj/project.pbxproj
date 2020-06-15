@@ -28,6 +28,7 @@
 		2BCC3EB8249351CA00E8B22C /* ExtensionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EB7249351CA00E8B22C /* ExtensionExample.swift */; };
 		2BCC3EBA2495C4CB00E8B22C /* ProtocolExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */; };
 		2BCC3EBC2495FF1500E8B22C /*  GenericExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EBB2495FF1500E8B22C /*  GenericExample.swift */; };
+		2BCC3EBE2497460200E8B22C /* ARCExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3EBD2497460200E8B22C /* ARCExample.swift */; };
 		AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17275F19B8E32D00565259 /* AppDelegate.swift */; };
 		AE17276219B8E32D00565259 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17276119B8E32D00565259 /* TableViewController.swift */; };
 		AE17276519B8E32D00565259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE17276319B8E32D00565259 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		2BCC3EB7249351CA00E8B22C /* ExtensionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionExample.swift; sourceTree = "<group>"; };
 		2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExample.swift; sourceTree = "<group>"; };
 		2BCC3EBB2495FF1500E8B22C /*  GenericExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " GenericExample.swift"; sourceTree = "<group>"; };
+		2BCC3EBD2497460200E8B22C /* ARCExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCExample.swift; sourceTree = "<group>"; };
 		AE17275A19B8E32D00565259 /* SwiftBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE17275E19B8E32D00565259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE17275F19B8E32D00565259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				2BCC3EB7249351CA00E8B22C /* ExtensionExample.swift */,
 				2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */,
 				2BCC3EBB2495FF1500E8B22C /*  GenericExample.swift */,
+				2BCC3EBD2497460200E8B22C /* ARCExample.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				2B0D981224849E2B00673E67 /* SwiftClass.swift in Sources */,
 				2BCC3EBC2495FF1500E8B22C /*  GenericExample.swift in Sources */,
 				2BCC35862490847B00E8B22C /* SubscriptExample.swift in Sources */,
+				2BCC3EBE2497460200E8B22C /* ARCExample.swift in Sources */,
 				2B0D981024827F6E00673E67 /* BuilderExample.swift in Sources */,
 				AE17276219B8E32D00565259 /* TableViewController.swift in Sources */,
 				2BCC3AF42492246F00E8B22C /* ErrorhandlingExample.swift in Sources */,
