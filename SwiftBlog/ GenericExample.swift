@@ -8,7 +8,7 @@
 
 import Foundation
 
-//泛型
+//泛型（Generic）
 
 class  GenericExample {
     

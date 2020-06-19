@@ -71,6 +71,14 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         parser = XMLParser(contentsOf: url!)!
         parser.delegate = self
         parser.parse()
+        
+        //
+        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Sign In", style: .plain, target: nil,
+            action: #selector(self.signInAction)
+            //Argument of '#selector' refers to instance method 'signInAction()' that is not exposed to Objective-C
+        )
+        
 
         //let contents = String.init(contentsOf: url!, encoding: String.Encoding(rawValue: 0))
 //        let contents = String(contentsOf: url, encoding: 0, error: nil)
@@ -101,7 +109,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             }
         }*/
         
-        let stringNumbers = ["1", "2", "3", "foo"]
+        /*let stringNumbers = ["1", "2", "3", "foo"]
         let maybeInts = stringNumbers.map {Int($0)}
         for case let i? in maybeInts {
             print(i)
@@ -153,18 +161,18 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         let sample = TestSample();
         sample.printName()
         
-        TestSample.someTypeMethod()
+        TestSample.someTypeMethod() */
         
         //let conforms = sample.conforms(to: TestProtocol.self)
        // print(conforms)
         
         
-        var variableString = "Horse"
-        var address = String(format: "%p", variableString)
-        print(address)
-        variableString += " and carriage"
-        address = String(format: "%p", variableString)
-        print(address)
+//        var variableString = "Horse"
+//        var address = String(format: "%p", variableString)
+//        print(address)
+//        variableString += " and carriage"
+//        address = String(format: "%p", variableString)
+//        print(address)
         // variableString is now "Horse and carriage"
 
         //let constantString = "Highlander"
@@ -190,13 +198,13 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             print("Failure...  \(message)")
         }*/
         
-        let a = SimpleClass()
-        a.adjust()
-        let aDescription = a.simpleDescription
-        
-        var b = SimpleStructure()
-        b.adjust()
-        let bDescription = b.simpleDescription
+    //    let a = SimpleClass()
+    //    a.adjust()
+    //    let aDescription = a.simpleDescription
+    //
+    //    var b = SimpleStructure()
+    //    b.adjust()
+    //    let bDescription = b.simpleDescription
         
 
         /*var fridgeIsOpen = false
@@ -213,7 +221,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         }
         fridgeContains("banana")
         print(fridgeIsOpen)*/
-        let unusualMenagerie = "🐨🐌🐧🐪\u{301}"
+        /*let unusualMenagerie = "🐨🐌🐧🐪\u{301}"
         let dd = unusualMenagerie[unusualMenagerie.index(before: unusualMenagerie.endIndex)]
         print("unusualMenagerie \(unusualMenagerie) endIndex \(dd) has \(unusualMenagerie.count) characters")
         
@@ -227,7 +235,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
             5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
         ]
-        let numbers = [16, 58, 510]
+        let numbers = [16, 58, 510]*/
         /*let strings = numbers.map {
             (number) -> String in
             var number = number
@@ -238,7 +246,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             } while number > 0
             return output
         }*/
-        let strings = numbers.map({
+        /*let strings = numbers.map({
             (number) -> String in
             var number = number
             var output = ""
@@ -247,13 +255,15 @@ class TableViewController: UITableViewController, XMLParserDelegate {
                 number /= 10
             } while number > 0
             return output
-        })
+        })*/
         // strings 常量被推断为字符串类型数组，即 [String]
         // 其值为 ["OneSix", "FiveEight", "FiveOneZero"]
-        print(strings)
+        //print(strings)
         
-        print(ASCIIControlCharacter.lineFeed.rawValue)
+        //print(ASCIIControlCharacter.lineFeed.rawValue)
     }
+    
+    @objc dynamic private func signInAction() {}
     
     func swapTwoInts(_ a: inout Int, _ b: inout Int) {
         let temporaryA = a

@@ -11,28 +11,33 @@ import Foundation
 class SwiftClassDynamicExample {
     
     func dynamicTest() {
-        let classIns = SwiftClass(110)
+         let classIns = SwiftClass(110)
          let cls = objc_classes(of: object_getClass(classIns)!)
+        //[SwiftBlog.SwiftClass, Swift._SwiftObject] 没有继承NSObject
+        //[SwiftBlog.SwiftClass, NSObject] 继承NSObject
          print(cls)
         
-         let cl: AnyClass? = cls.last
+         //let cl: AnyClass? = cls.last
          
-         print(objc_methods(of: cl!))
+         //print(objc_methods(of: cl!))
          // ["class", "isKindOfClass:", "release", "isEqual:", "self", "performSelector:", "performSelector:withObject:", "performSelector:withObject:withObject:", "isProxy", "isMemberOfClass:", "conformsToProtocol:", "respondsToSelector:", "retain", "autorelease", "retainCount", "zone", "hash", "superclass", "description", "debugDescription", "dealloc", "methodForSelector:", "doesNotRecognizeSelector:", "allowsWeakReference", "retainWeakReference", "isDeallocating", "tryRetain", "isNSArray", "isNSNumber", "isNSDictionary", "isNSSet", "isNSOrderedSet", "isNSString", "cfTypeID", "isNSValue", "isNSDate", "isNSData", "isNSObject", "copyDescription", "isNSCFConstantString", "isNSTimeZone"]
 
-         print(objc_properties(of: cl!))
+         //print(objc_properties(of: cl!))
          // ["hash", "superclass", "description", "debugDescription"]
-         print(objc_ivars(of: cl!))
+         //print(objc_ivars(of: cl!))
          // ["isa", "refCounts"]
-         print(objc_protocols(of: cl!))
+         //print(objc_protocols(of: cl!))
          // ["NSObject"]
-         print(objc_methods(of: object_getClass(classIns)!))
+         //print(objc_methods(of: object_getClass(classIns)!))
          
-         print(cl!)
+         //print(cl!)
          
          // print((classIns as AnyObject).perform?(NSSelectorFromString("class")) as Any)
          // print((classIns as AnyObject).perform?(NSSelectorFromString("echo:"), with: 110)) // Error.
-         // print((classIns as AnyObject).perform?(NSSelectorFromString("dynamicEcho:"), with: 110) as Any)
+        
+        print((classIns as AnyObject).perform?(NSSelectorFromString("dynamicEcho:"), with: 10) as Any)
+        //SwiftClass Extension
+        print((classIns as AnyObject).perform?(NSSelectorFromString("echoExtension:"), with: 10) as Any)
          
          //let swiftObjectClass = objc_getClass("SwiftObject".withCString { $0 })
          //print(swiftObjectClass as Any)

@@ -14,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        UIApplication.shared.statusBarStyle = .lightContent
+        //UIApplication.shared.statusBarStyle = .lightContent
+        
+        //
+        //SwiftClassDynamicExample().dynamicTest()
         
         /*var hitendra = Person(name: "Hitendra Solanki",
                               gender: "Male",
@@ -95,8 +98,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          将 totalSteps 的值设置为 896
          增加了 536 步
          */
-        let stepCounter = StepCounter()
-        stepCounter.totalSteps = 200
+        //let stepCounter = StepCounter()
+        //stepCounter.totalSteps = 200
         
 //        stepCounter.totalSteps = 360
 //        stepCounter.totalSteps = 896
@@ -121,9 +124,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        train.defaultType = "dfddfd"
        print(train.defaultType)*/
         
-        let someRequired = SomeRequiredSubclass()
-        print(addressOf(someRequired))
-        print(addressOf(someRequired.self))
+//        let someRequired = SomeRequiredSubclass()
+//        print(addressOf(someRequired))
+//        print(addressOf(someRequired.self))
         //print(addressOf(object_getClass(someRequired)))
         /*
          object_getClass(someRequired)
@@ -203,18 +206,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /*内存安全*/
         
-        var oscar = Player(name: "Oscar", health: 10, energy: 10)
-        var maria = Player(name: "Maria", health: 5, energy: 10)
-        oscar.shareHealth(with: &maria)  // 正常
+        //var oscar = Player(name: "Oscar", health: 10, energy: 10)
+        //var maria = Player(name: "Maria", health: 5, energy: 10)
+        //oscar.shareHealth(with: &maria)  // 正常
         
         //Inout arguments are not allowed to alias each other
         //Overlapping accesses to 'oscar', but modification requires exclusive access; consider copying to a local variable
         //oscar.shareHealth(with: &oscar) //内存访问冲突
         /*内存安全*/
         
+//        let font = UIFont.systemFont(ofSize: 10.0)
+//        var label1 = Label(text:"Hi", font:font)  //栈区包含了存储在堆区的指针
+//        var label2 = label1 //label2产生新的指针，和label1一样指向同样的string和font地址
+        //label2.text = "swift"
+        
+        //let another = UIFont.systemFont(ofSize: 12.0)
+        //label2.font = another
+        //label2.font = UIFont.systemFont(ofSize: 12.0)
+        
+//        print(Base().directProperty)
+//        print(Sub().directProperty)
+//
+//        print(Base().indirectProperty)
+//        print(Sub().indirectProperty)
+        
+        //Base().test()
+        //Sub().test()
+        
+        
+//        let obj = ChildClass()
+//        obj.method2()
+        
+        let myStruct = MyStruct()
+        let proto: MyProtocol = myStruct
+
+        myStruct.extensionMethod() // -> “In Struct”
+        proto.extensionMethod() // -> “In Protocol”
+        
+        
+        //let classIns = Base()
+        //(classIns as AnyObject).perform?(NSSelectorFromString("test"))
+        //
+        //let subClassIns = Sub()
+        //(subClassIns as AnyObject).perform?(NSSelectorFromString("test"))
+        
+        //var sub:LoudPerson = LoudPerson()
+        //sub.sayHi()  //sub
+        
+        //协议的扩展内实现的方法，无法被遵守类的子类重载
+        //var sub:ParentPerson = LoudPerson()
+        //sub.sayHi() //hello
+        
+        //let subClass : MyClass = SubClass()
+        //subClass.extensionMethod()
+        
         return true
     }
-    
     
     /// 获取内存地址
     /// http://stackoverflow.com/a/36539213/226791
@@ -227,6 +274,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func addressOf<T: AnyObject>(_ o: T) -> String {
         let addr = unsafeBitCast(o, to: Int.self)
         return String(format: "%p", addr)
+    }
+    
+    func greetings(_ greeter: Greetable) {
+        greeter.sayHi()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -288,3 +339,104 @@ extension Player {
     }
 }
 
+
+struct Label {
+ var text:String
+ var font:UIFont
+ func draw() {}
+}
+
+//主体方法加上 @objc dynamic 子类的extension 可以重写
+//父类的extension中的方法加 @objc 子类的主体可以重写
+
+//
+class Base :NSObject {
+    //Overriding non-@objc declarations from extensions is not supported
+    //Cannot override a non-dynamic class declaration from an extension
+    //@objc dynamic
+    @objc dynamic var directProperty:String { return "This is Base" }
+    var indirectProperty:String { return directProperty }
+    
+    //Overriding non-@objc declarations from extensions is not supported
+    //Cannot override a non-dynamic class declaration from an extension
+    //@objc dynamic
+   @objc dynamic public func test() {
+        print("Base--test")
+    }
+}
+
+class Sub:Base {}
+
+extension Sub {
+    //@objc dynamic 对应的属性需要加上
+    override var directProperty: String {
+        return "This is Sub"
+    }
+    
+    override func test() {
+        print("Sub--test")
+    }
+}
+
+protocol Greetable {
+    func sayHi()
+}
+extension Greetable {
+    func sayHi() {
+        print("hello")
+    }
+}
+
+class ParentPerson : Greetable {
+}
+class LoudPerson:ParentPerson {
+    func sayHi() {
+        print("sub")
+    }
+}
+
+class ParentClass {
+    func method1() {}
+    func method2() {
+        print("this is ParentClass")
+    }
+}
+class ChildClass: ParentClass {
+    override func method2() {
+        print("this is ChildClass")
+    }
+    func method3() {}
+}
+
+protocol MyProtocol {
+}
+struct MyStruct: MyProtocol {
+}
+extension MyStruct {
+    func extensionMethod() {
+        print("In Struct")
+    }
+}
+extension MyProtocol {
+    func extensionMethod() {
+        print("In Protocol")
+    }
+}
+
+class MyClass {
+//    func extensionMethod() {
+//        print("MyClass")
+//    }
+}
+extension MyClass {
+    func extensionMethod() {
+        print("MyClass")
+    }
+}
+
+//Overriding non-@objc declarations from extensions is not supported
+/*class SubClass : MyClass {
+    override func extensionMethod() {
+        print("SubClass")
+    }
+}*/
