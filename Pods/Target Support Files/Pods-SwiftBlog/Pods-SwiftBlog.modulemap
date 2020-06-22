@@ -1,0 +1,6 @@
+framework module Pods_SwiftBlog {
+  umbrella header "Pods-SwiftBlog-umbrella.h"
+
+  export *
+  module * { export * }
+}

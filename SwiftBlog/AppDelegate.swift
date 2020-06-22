@@ -260,6 +260,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let subClass : MyClass = SubClass()
         //subClass.extensionMethod()
         
+        
+        print(B().a())  // 0
+        print(C().a()) // 1
+        print((C() as A).a()) // 0 # We thought return 1.
+
+        // Success cases.
+        print(D().a()) // 1
+        print((D() as A).a()) // 1
+        print(E().a()) // 2
+        print((E() as A).a()) // 2
+        
         return true
     }
     
@@ -440,3 +451,36 @@ extension MyClass {
         print("SubClass")
     }
 }*/
+
+
+// Defined protocol.
+protocol A {
+    func a() -> Int
+}
+extension A {
+    func a() -> Int {
+        return 0
+    }
+}
+
+// A class doesn't have implement of the function.
+class B: A {}
+
+class C: B {
+    func a() -> Int {
+        return 1
+    }
+}
+
+// A class has implement of the function.
+class D: A {
+    func a() -> Int {
+        return 1
+    }
+}
+
+class E: D {
+    override func a() -> Int {
+        return 2
+    }
+}
