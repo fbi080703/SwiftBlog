@@ -17,6 +17,7 @@
 		2B5CB5032465083500DB3850 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CB5022465083400DB3850 /* Test.swift */; };
 		2B8499972487C52500BEB1AE /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499962487C52500BEB1AE /* Runtime.swift */; };
 		2B9F141E24892A3100768E6D /* AdapterPatternExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F141D24892A3100768E6D /* AdapterPatternExample.swift */; };
+		2BB14B8D24A06710007AB489 /* MasonryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB14B8C24A06710007AB489 /* MasonryViewController.swift */; };
 		2BCC2F9D248B3E9D00E8B22C /* ClosureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC2F9C248B3E9D00E8B22C /* ClosureExample.swift */; };
 		2BCC3104248E6A3D00E8B22C /* PropertyExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3103248E6A3D00E8B22C /* PropertyExample.swift */; };
 		2BCC3106248F3A6300E8B22C /* MethodExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC3105248F3A6300E8B22C /* MethodExample.swift */; };
@@ -51,6 +52,7 @@
 		2B5CB5022465083400DB3850 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		2B8499962487C52500BEB1AE /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 		2B9F141D24892A3100768E6D /* AdapterPatternExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterPatternExample.swift; sourceTree = "<group>"; };
+		2BB14B8C24A06710007AB489 /* MasonryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonryViewController.swift; sourceTree = "<group>"; };
 		2BCC2F9C248B3E9D00E8B22C /* ClosureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureExample.swift; sourceTree = "<group>"; };
 		2BCC3103248E6A3D00E8B22C /* PropertyExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyExample.swift; sourceTree = "<group>"; };
 		2BCC3105248F3A6300E8B22C /* MethodExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodExample.swift; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 				45B6CE6DBBE8CF230A57FECA /* Pods-SwiftBlog.debug.xcconfig */,
 				6416542585ABA0DE9C2CF60C /* Pods-SwiftBlog.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +157,7 @@
 				2BCC3EB92495C4CB00E8B22C /* ProtocolExample.swift */,
 				2BCC3EBB2495FF1500E8B22C /*  GenericExample.swift */,
 				2BCC3EBD2497460200E8B22C /* ARCExample.swift */,
+				2BB14B8C24A06710007AB489 /* MasonryViewController.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -293,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB14B8D24A06710007AB489 /* MasonryViewController.swift in Sources */,
 				2B0D981224849E2B00673E67 /* SwiftClass.swift in Sources */,
 				2BCC3EBC2495FF1500E8B22C /*  GenericExample.swift in Sources */,
 				2BCC35862490847B00E8B22C /* SubscriptExample.swift in Sources */,

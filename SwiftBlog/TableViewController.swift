@@ -57,7 +57,18 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
+        let button = UIButton.init(frame:CGRect.init(x: 0, y: 0, width: 200, height: 200))
+        button.setTitle("跳转", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.setTitleColor(UIColor.red, for: .normal)
+        button.backgroundColor = UIColor.gray
+        button.addTarget(self, action: #selector(self.signInAction), for: .touchUpInside)
+        //let barButtonItem = UIBarButtonItem.init(customView: button)
+        //navigationController?.navigationItem.rightBarButtonItem = barButtonItem
+        
+        self.view.addSubview(button)
+        
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavigationBarBackground"), for: .default)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font:UIFont(name: "HelveticaNeue-Light", size: 18)!]
@@ -71,14 +82,6 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         parser = XMLParser(contentsOf: url!)!
         parser.delegate = self
         parser.parse()
-        
-        //
-        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Sign In", style: .plain, target: nil,
-            action: #selector(self.signInAction)
-            //Argument of '#selector' refers to instance method 'signInAction()' that is not exposed to Objective-C
-        )
-        
 
         //let contents = String.init(contentsOf: url!, encoding: String.Encoding(rawValue: 0))
 //        let contents = String(contentsOf: url, encoding: 0, error: nil)
@@ -263,7 +266,10 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         //print(ASCIIControlCharacter.lineFeed.rawValue)
     }
     
-    @objc dynamic private func signInAction() {}
+    @objc func signInAction() {
+        let masonry = MasonryViewController.init()
+        self.navigationController?.pushViewController(masonry, animated: true)
+    }
     
     func swapTwoInts(_ a: inout Int, _ b: inout Int) {
         let temporaryA = a
@@ -295,7 +301,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     }
     
     func useString(s: String?) {
-        print(s)
+        print(s ?? "0")
     }
     
     //func doStuffWithFileExtension( leName: String) {
