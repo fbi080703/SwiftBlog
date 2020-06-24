@@ -53,7 +53,7 @@ class MasonryViewController: UIViewController {
         
         //print(Date.init())
         let begin = CACurrentMediaTime()
-        while index < 100 {
+        while index < 1000 {
             let v = UIView.init()
             v.backgroundColor = UIColor.init(red: CGFloat(arc4random() % 255)/255.0, green: CGFloat(arc4random() % 255)/255.0, blue: CGFloat(arc4random() % 255)/255.0, alpha: 1.0) //colors[Int(arc4random()) % 13]
             self.view.addSubview(v)
