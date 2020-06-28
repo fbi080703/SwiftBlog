@@ -3,7 +3,7 @@
 //  SwiftBlog
 //
 //  Created by wulongwang on 2020/6/10.
-//  Copyright © 2020 Patrick Balestra. All rights reserved.
+//  Copyright © 2020 Wulongwang. All rights reserved.
 //
 
 import Foundation
@@ -197,3 +197,29 @@ class SomeRequiredSubclass: SomeRequiredClass {
 //如果你使用闭包来初始化属性，请记住在闭包执行时，实例的其它部分都还没有初始化。
 //这意味着你不能在闭包里访问其它属性，即使这些属性有默认值。
 //同样，你也不能使用隐式的 self 属性，或者调用任何实例方法。
+
+
+//只要在子类中实现重写了父类 convenience 方法所需要的 init 方法的话，
+//我们在子类中就也可以 使用父类的 convenience 初始化方法了
+
+class ClassA {
+    let numA: Int
+    init(num: Int) {
+        numA = num
+    }
+    convenience init(bigNum: Bool) {
+        self.init(num: bigNum ? 10000 : 1)
+    }
+}
+
+class ClassB: ClassA {
+    let numB: Int
+    override init(num: Int) {
+        numB = num + 1
+        super.init(num: num)
+    }
+}
+
+//let anObj = ClassB(bigNum: true)
+//1. 初始化路径必须保证对象完全初始化，这可以通过调用本类型的 designated 初始化方法来得到保证;
+//2. 子类的 designated 初始化方法必须调用父类的 designated 方法，以保证父类也完成初始化

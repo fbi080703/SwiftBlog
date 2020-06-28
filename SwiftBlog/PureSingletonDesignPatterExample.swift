@@ -3,7 +3,7 @@
 //  SwiftBlog
 //
 //  Created by wulongwang on 2020/6/2.
-//  Copyright © 2020 Patrick Balestra. All rights reserved.
+//  Copyright © 2020 Wulongwang. All rights reserved.
 //
 
 //https://medium.com/swift-programming/https-medium-com-hitendrahckr-part-2-singletone-desing-pattern-in-swift-by-tutorials-the-power-of-oop-431314237b10

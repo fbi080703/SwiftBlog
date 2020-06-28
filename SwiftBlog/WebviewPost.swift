@@ -2,8 +2,8 @@
 //  WebviewPost.swift
 //  SwiftBlog
 //
-//  Created by Patrick Balestra on 04/09/14.
-//  Copyright (c) 2014 Patrick Balestra. All rights reserved.
+//  Created by Wulongwang on 04/09/14.
+//  Copyright (c) 2014 Wulongwang. All rights reserved.
 //
 
 import UIKit

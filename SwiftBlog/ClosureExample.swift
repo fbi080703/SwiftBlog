@@ -3,7 +3,7 @@
 //  SwiftBlog
 //
 //  Created by wulongwang on 2020/6/6.
-//  Copyright © 2020 Patrick Balestra. All rights reserved.
+//  Copyright © 2020 Wulongwang. All rights reserved.
 //
 
 //闭包
@@ -157,6 +157,8 @@ class ClosureExample {
     //自动闭包
     //过度使用 autoclosures 会让你的代码变得难以理解。
     //上下文和函数名应该能够清晰地表明求值是被延迟执行的
+    //@autoclosure 并不支持带有输入参数的写法，也就是说只有形如 () -> T 的参数才能使用这个特性进行简化
+    //autoclosure可以避免不必要的开销
     func autoclosures() {
         var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
         print(customersInLine.count)

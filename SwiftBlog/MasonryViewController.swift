@@ -3,7 +3,7 @@
 //  SwiftBlog
 //
 //  Created by wulongwang on 2020/6/22.
-//  Copyright © 2020 Patrick Balestra. All rights reserved.
+//  Copyright © 2020 Wulongwang. All rights reserved.
 //
 
 import Foundation
@@ -11,47 +11,57 @@ import UIKit
 import Masonry
 import SnapKit
 
+//https://oleb.net/blog/2014/07/swift-instance-methods-curried-functions/?utm_campaign=iOS_Dev_Weekly_Issue_157&utm_medium=email&utm_source=iOS+Dev+Weekly
 
 class MasonryViewController: UIViewController {
+    
+    let button = Control()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
-        //var rows = 0
+        
+        masonryTest()
+        snapTest()
+        
+        //柯里化 (Currying)
+        //button.setTarget(self, action: MasonryViewController.onButtonTap, controlEvent: .touchUpInside)
+        //button.performActionForControlEvent(controlEvent: .touchUpInside)
+    }
+    
+    func onButtonTap() {
+        print("Button was tapped")
+    }
+    
+    func masonryTest() {
         let columns = 4
         let w = self.view.frame.size.width / 4.0
         var index = 0
-        //var views : [UIView] = []
-        //print(Date.init())
-//        let begin = CACurrentMediaTime()
-//        while index < 10000 {
-//            let v = UIView.init()
-//            v.backgroundColor = UIColor.init(red: CGFloat(arc4random() % 255)/255.0, green: CGFloat(arc4random() % 255)/255.0, blue: CGFloat(arc4random() % 255)/255.0, alpha: 1.0)
-//            self.view.addSubview(v)
-//            let leftWidth = CGFloat((index % columns)) * w
-//            let topWidth = CGFloat((index / columns)) * w
-//            v.mas_makeConstraints { (make) in
-//                make?.height.equalTo()(w)
-//                make?.width.equalTo()(w)
-//                make?.top.equalTo()(topWidth)
-//                //make?.right.and()?.left()?.equalTo()(leftWidth)
-//                make?.left.equalTo()(leftWidth)
-//                //make?.top.equalTo()(self.view)
-//            }
-//            index += 1
-//        }
-//        let end = CACurrentMediaTime()
-        //print(String(format:"%.6f",end - begin));
-        //print(Date.init()) */
-        
-        /*
-         make.top.mas_equalTo(self.view.mas_height).offset(64);
-                make.bottom.mas_equalTo(self.view.mas_bottom);
-                make.left.mas_equalTo(self.view.mas_left);
-                make.right.mas_equalTo(self.view.mas_right);
-         */
-        
-        //print(Date.init())
+        let begin = CACurrentMediaTime()
+        while index < 10000 {
+            let v = UIView.init()
+            v.backgroundColor = UIColor.init(red: CGFloat(arc4random() % 255)/255.0, green: CGFloat(arc4random() % 255)/255.0, blue: CGFloat(arc4random() % 255)/255.0, alpha: 1.0)
+            self.view.addSubview(v)
+            let leftWidth = CGFloat((index % columns)) * w
+            let topWidth = CGFloat((index / columns)) * w
+            v.mas_makeConstraints { (make) in
+                make?.height.equalTo()(w)
+                make?.width.equalTo()(w)
+                make?.top.equalTo()(topWidth)
+                //make?.right.and()?.left()?.equalTo()(leftWidth)
+                make?.left.equalTo()(leftWidth)
+                //make?.top.equalTo()(self.view)
+            }
+            index += 1
+        }
+        let end = CACurrentMediaTime()
+        print(String(format:"%.6f",end - begin));
+    }
+    
+    func snapTest() {
+        let columns = 4
+        let w = self.view.frame.size.width / 4.0
+        var index = 0
         let begin = CACurrentMediaTime()
         while index < 1000 {
             let v = UIView.init()
@@ -69,7 +79,6 @@ class MasonryViewController: UIViewController {
         }
         let end = CACurrentMediaTime()
         print(String(format:"%.6f",end - begin));
-        //print(Date.init())
     }
     
     override func viewWillAppear(_ animated: Bool) {

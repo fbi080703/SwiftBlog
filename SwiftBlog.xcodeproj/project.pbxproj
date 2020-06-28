@@ -15,6 +15,7 @@
 		2B0D9832248602A800673E67 /* SemiSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */; };
 		2B0D9834248635B000673E67 /* SwiftNewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */; };
 		2B5CB5032465083500DB3850 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CB5022465083400DB3850 /* Test.swift */; };
+		2B655A9A24A6D94100C13B5C /* SwiftTipsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B655A9924A6D94100C13B5C /* SwiftTipsExample.swift */; };
 		2B8499972487C52500BEB1AE /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499962487C52500BEB1AE /* Runtime.swift */; };
 		2B9F141E24892A3100768E6D /* AdapterPatternExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F141D24892A3100768E6D /* AdapterPatternExample.swift */; };
 		2BB14B8D24A06710007AB489 /* MasonryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB14B8C24A06710007AB489 /* MasonryViewController.swift */; };
@@ -50,6 +51,7 @@
 		2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
 		2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeatures.swift; sourceTree = "<group>"; };
 		2B5CB5022465083400DB3850 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		2B655A9924A6D94100C13B5C /* SwiftTipsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTipsExample.swift; sourceTree = "<group>"; };
 		2B8499962487C52500BEB1AE /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 		2B9F141D24892A3100768E6D /* AdapterPatternExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterPatternExample.swift; sourceTree = "<group>"; };
 		2BB14B8C24A06710007AB489 /* MasonryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonryViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				2BCC3EBB2495FF1500E8B22C /*  GenericExample.swift */,
 				2BCC3EBD2497460200E8B22C /* ARCExample.swift */,
 				2BB14B8C24A06710007AB489 /* MasonryViewController.swift */,
+				2B655A9924A6D94100C13B5C /* SwiftTipsExample.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -202,7 +205,7 @@
 				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "Patrick Balestra";
+				ORGANIZATIONNAME = Wulongwang;
 				TargetAttributes = {
 					AE17275919B8E32D00565259 = {
 						CreatedOnToolsVersion = 6.0;
@@ -315,6 +318,7 @@
 				2BCC2F9D248B3E9D00E8B22C /* ClosureExample.swift in Sources */,
 				2BCC35A72490C7FF00E8B22C /* ConstructExample.swift in Sources */,
 				AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */,
+				2B655A9A24A6D94100C13B5C /* SwiftTipsExample.swift in Sources */,
 				2B0D981424849E5F00673E67 /* SwiftClassDynamicExample.swift in Sources */,
 				2BCC3106248F3A6300E8B22C /* MethodExample.swift in Sources */,
 				AE17278B19B8F48100565259 /* WebviewPost.swift in Sources */,

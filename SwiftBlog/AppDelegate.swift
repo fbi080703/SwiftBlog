@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SwiftBlog
 //
-//  Created by Patrick Balestra on 04/09/14.
-//  Copyright (c) 2014 Patrick Balestra. All rights reserved.
+//  Created by Wulongwang on 04/09/14.
+//  Copyright (c) 2014 Wulongwang. All rights reserved.
 //
 
 import UIKit
@@ -271,6 +271,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(E().a()) // 2
         print((E() as A).a()) // 2
         
+        #if swift(>=5.2)
+           print("Running Swift 5.0 or later")
+        #else
+           print("Running old Swift")
+        #endif
+        
+        do {
+            let tips = SwiftTipsExample.init()
+            //SwiftTipsExample.Type // typealias AnyClass = AnyObject.Type
+            //通过 AnyObject.Type 这种方式所得到是一个元类型 (Meta)
+            try tips.example()
+        } catch {
+        }
+        
         return true
     }
     
@@ -312,8 +326,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
 extension String {
@@ -484,3 +496,4 @@ class E: D {
         return 2
     }
 }
+

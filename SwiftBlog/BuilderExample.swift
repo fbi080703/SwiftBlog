@@ -3,7 +3,7 @@
 //  SwiftBlog
 //
 //  Created by wulongwang on 2020/5/30.
-//  Copyright © 2020 Patrick Balestra. All rights reserved.
+//  Copyright © 2020 Wulongwang. All rights reserved.
 //
 
 import Foundation
