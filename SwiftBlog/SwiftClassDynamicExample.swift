@@ -12,6 +12,11 @@ class SwiftClassDynamicExample {
     
     func dynamicTest() {
          let classIns = SwiftClass(110)
+        // MARK: type(of:xxx)
+        let clsName = type(of: classIns)
+        print(clsName)
+        debugPrint(clsName)
+        
          let cls = objc_classes(of: object_getClass(classIns)!)
         //[SwiftBlog.SwiftClass, Swift._SwiftObject] 没有继承NSObject
         //[SwiftBlog.SwiftClass, NSObject] 继承NSObject

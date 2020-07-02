@@ -21,12 +21,18 @@ class MasonryViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
         
+        //autoreleasepool {}
         masonryTest()
         snapTest()
-        
         //柯里化 (Currying)
         //button.setTarget(self, action: MasonryViewController.onButtonTap, controlEvent: .touchUpInside)
         //button.performActionForControlEvent(controlEvent: .touchUpInside)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.alpha = 0
+        } completion: { _ in
+            self.view.removeFromSuperview()
+        }
     }
     
     func onButtonTap() {
@@ -48,9 +54,7 @@ class MasonryViewController: UIViewController {
                 make?.height.equalTo()(w)
                 make?.width.equalTo()(w)
                 make?.top.equalTo()(topWidth)
-                //make?.right.and()?.left()?.equalTo()(leftWidth)
                 make?.left.equalTo()(leftWidth)
-                //make?.top.equalTo()(self.view)
             }
             index += 1
         }
