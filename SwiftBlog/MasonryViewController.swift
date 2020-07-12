@@ -28,11 +28,23 @@ class MasonryViewController: UIViewController {
         //button.setTarget(self, action: MasonryViewController.onButtonTap, controlEvent: .touchUpInside)
         //button.performActionForControlEvent(controlEvent: .touchUpInside)
         
-        UIView.animate(withDuration: 0.3) {
-            self.view.alpha = 0
-        } completion: { _ in
-            self.view.removeFromSuperview()
-        }
+        //UIView.animateKeyframes(withDuration: 5.0, delay: 0.0, options: []) {
+        //
+        //} completion: {_ in
+        //
+        //}
+        
+        //UIView.animate(withDuration: 5.0, delay: 0.0, options: []) {
+        //
+        //} completion: { (isComplete) in
+        //    if isComplete {
+        //
+        //    }
+        //}
+        
+//        UIView.animate(withDuration: 0.3, delay: 0.0,
+//       options: [.curveEaseIn, .allowUserInteraction], animations: {},
+//       completion: nil)
     }
     
     func onButtonTap() {

@@ -8,7 +8,7 @@
 
 import UIKit
 import AppleArchive
-
+import Accelerate
 import os
 
 struct Mountain {
@@ -45,6 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var m2 = m1
         print(NSString(format: "%p", addressOf(&m1)))
         print(NSString(format: "%p", addressOf(&m2)))
+        
+        //var initalArray = [1, 2, 3]
+        //let pointer: UnsafeMutableRawPointer = UnsafeMutablePointer(mutating: initalArray)
+        
+        //CFArrayGetValueAtIndex
+        //vImage_Buffer(data: T##UnsafeMutableRawPointer!, height: <#T##vImagePixelCount#>, width: <#T##vImagePixelCount#>, rowBytes: <#T##Int#>)
+
+        //var a: [Float16] = [34,43,56]
+        //floatMethod(&a)
+        
         //print(NSString(format: "%p", addressOf(&m1.name)))
         //print(NSString(format: "%p", addressOf(&m2.name)))
         //print(NSString(format: "%p", addressOf(&m1.height)))
@@ -70,6 +80,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let gcdExample = SwiftGrandCentralDispatchExample()
         gcdExample.grandCentralDispatchTest()
+        
+        //var d : Int32 = 9
+        var dd : [CInt] = [34,45,444]
+        
+        //testMethod(&d)
+        testMethod(&dd)
         
         //var stepCounter = Point(500, 4434)
         //stepCounter.y = 54333
@@ -138,11 +154,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //oscar.shareHealth(with: &oscar) //内存访问冲突
         /*内存安全*/
         
-//        let font = UIFont.systemFont(ofSize: 10.0)
-//        var label1 = Label(text:"Hi", font:font)  //栈区包含了存储在堆区的指针
-//        var label2 = label1 //label2产生新的指针，和label1一样指向同样的string和font地址
+        //let font = UIFont.systemFont(ofSize: 10.0)
+        //let label1 = Label(text:"Hi", font:font)  //栈区包含了存储在堆区的指针
+        //var label2 = label1 //label2产生新的指针，和label1一样指向同样的string和font地址
         //label2.text = "swift"
-        
+        //
         //let another = UIFont.systemFont(ofSize: 12.0)
         //label2.font = another
         //label2.font = UIFont.systemFont(ofSize: 12.0)
@@ -199,6 +215,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            print("Running old Swift")
         #endif
         return true
+    }
+    
+    func testMethod(_ ints: UnsafePointer<[CInt]>) {
+        print(ints.pointee)
     }
     
     /// 获取内存地址
@@ -332,8 +352,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func anyObjectAny() {
         /*
-         
-        
          Any 和 AnyObject 的类型转换
          Swift 为不确定类型提供了两种特殊的类型别名：
          Any 可以表示任何类型，包括函数类型。
@@ -437,9 +455,9 @@ extension Player {
 
 
 struct Label {
- var text:String
- var font:UIFont
- func draw() {}
+  var text:String
+  var font:UIFont
+  func draw() {}
 }
 
 //主体方法加上 @objc dynamic 子类的extension 可以重写

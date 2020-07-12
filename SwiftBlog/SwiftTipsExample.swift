@@ -128,6 +128,7 @@ class SwiftTipsExample {
                 print("\(x)是笔者本家")
             default:
                 print("你好，\($0)")
+                //debugPrint("你好，\($0)")
             }
         }
         let num: [Int?] = [48, 99, nil]
@@ -160,6 +161,12 @@ class SwiftTipsExample {
         let cokeClass = NSStringFromClass(type(of: coke)) //Coke
         let beerClass = NSStringFromClass(type(of: beer)) //Beer
         print("\(cokeClass)--\(beerClass)")
+        
+        
+        let a = MyTipsClass()
+        printTitle(a)
+        a.title = "Swifter.tips"
+        printTitle(a)
          
     }
     
@@ -232,6 +239,15 @@ class SwiftTipsExample {
                 let vc = (vcType as! UIViewController.Type).init()
                 print(vc)
             }
+        }
+    }
+    
+    // 测试
+    func printTitle(_ input: MyTipsClass) {
+        if let title = input.title {
+            print("Title: \(title)")
+        } else {
+            print("没有设置")
         }
     }
 }
@@ -543,7 +559,7 @@ class Child: Parent {
     }
 }
 
-//5、性能考虑 //编译器能够从 final 中获取额外的信 息，因此可以对类或者方法调用进行额外的优化处理
+//5、性能考虑 //编译器能够从 final 中获取额外的信息，因此可以对类或者方法调用进行额外的优化处理
 
 
 // MARK:- lazy 修饰符和 lazy 方法
@@ -652,3 +668,45 @@ class Beer: Drinking {
         return .yellow
     }
 }
+
+// MARK: delegate
+
+//Swift 的 protocol 是可以被除了 class 以外的其他类型遵守的，而对于像 struct 或是 enum 这样的类型，本身就不通过引用计数来管理内存，
+//所以也不可能用 weak 这样的 ARC 的概念来进行修饰
+//解决方案： protocol 声明的名字后面加上 class ，这可以为编译器显式地指明这个 protocol 只能由 class 来实现
+protocol MyClassDelegate : class {
+   func method()
+}
+
+final class MyTipsClass {
+   //weak' must not be applied to non-class-bound 'MyClassDelegate';
+   //consider adding a protocol conformance that has a class bound
+   weak var delegate: MyClassDelegate?
+}
+
+// MyTipsClass.swift
+private var key: Void?
+extension MyTipsClass {
+    var title: String? {
+        get {
+            return objc_getAssociatedObject(self, &key) as? String
+        }
+        set {
+            objc_setAssociatedObject(self,
+                                     &key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+
+// MARK: Lock
+
+func synchronized(_ lock: AnyObject, closure: () -> ()) {
+    objc_sync_enter(lock)
+    closure()
+    objc_sync_exit(lock)
+}
+
+// MARK: 属性访问控制
+
+//Swift 中由低至高提供了 private ， fileprivate ， internal ， public 和 open 五种访问控制的权 限。默认的 internal 在绝大部分时候是适用的，另外由于它是 Swift 中的默认的控制级，因此它 也是最为方便的
+// public 和 open 的区别在于，只有被 open 标记的内容才能 在别的框架中被继承或者重写。因此，如果你只希望框架的用户使用某个类型和方法，而不希望 他们继承或者重写的话，应该将其限定为 public 而非 open
