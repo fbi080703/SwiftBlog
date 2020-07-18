@@ -87,6 +87,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //testMethod(&d)
         testMethod(&dd)
         
+        let methodDispatchExample = MethodDispatchExample()
+        methodDispatchExample.example()
+        
         //var stepCounter = Point(500, 4434)
         //stepCounter.y = 54333
         
@@ -163,24 +166,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //label2.font = another
         //label2.font = UIFont.systemFont(ofSize: 12.0)
         
-//        print(Base().directProperty)
-//        print(Sub().directProperty)
-//
-//        print(Base().indirectProperty)
-//        print(Sub().indirectProperty)
-        
-        //Base().test()
-        //Sub().test()
-        
         
 //        let obj = ChildClass()
 //        obj.method2()
-        
-        let myStruct = MyStruct()
-        let proto: MyProtocol = myStruct
-
-        myStruct.extensionMethod() // -> “In Struct”
-        proto.extensionMethod() // -> “In Protocol”
         
         
         //let classIns = Base()
@@ -460,38 +448,6 @@ struct Label {
   func draw() {}
 }
 
-//主体方法加上 @objc dynamic 子类的extension 可以重写
-//父类的extension中的方法加 @objc 子类的主体可以重写
-
-//
-class Base :NSObject {
-    //Overriding non-@objc declarations from extensions is not supported
-    //Cannot override a non-dynamic class declaration from an extension
-    //@objc dynamic
-    @objc dynamic var directProperty:String { return "This is Base" }
-    var indirectProperty:String { return directProperty }
-    
-    //Overriding non-@objc declarations from extensions is not supported
-    //Cannot override a non-dynamic class declaration from an extension
-    //@objc dynamic
-   @objc dynamic public func test() {
-        print("Base--test")
-    }
-}
-
-class Sub:Base {}
-
-extension Sub {
-    //@objc dynamic 对应的属性需要加上
-    override var directProperty: String {
-        return "This is Sub"
-    }
-    
-    override func test() {
-        print("Sub--test")
-    }
-}
-
 protocol Greetable {
     func sayHi()
 }
@@ -520,32 +476,6 @@ class ChildClass: ParentClass {
         print("this is ChildClass")
     }
     func method3() {}
-}
-
-protocol MyProtocol {
-}
-struct MyStruct: MyProtocol {
-}
-extension MyStruct {
-    func extensionMethod() {
-        print("In Struct")
-    }
-}
-extension MyProtocol {
-    func extensionMethod() {
-        print("In Protocol")
-    }
-}
-
-class MyClass {
-//    func extensionMethod() {
-//        print("MyClass")
-//    }
-}
-extension MyClass {
-    func extensionMethod() {
-        print("MyClass")
-    }
 }
 
 //Overriding non-@objc declarations from extensions is not supported

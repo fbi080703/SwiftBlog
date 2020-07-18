@@ -14,6 +14,7 @@
 		2B0D98302485FEDB00673E67 /* PureSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */; };
 		2B0D9832248602A800673E67 /* SemiSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */; };
 		2B0D9834248635B000673E67 /* SwiftNewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */; };
+		2B1019D424BB17EB004118E0 /* MethodDispatchExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1019D324BB17EB004118E0 /* MethodDispatchExample.swift */; };
 		2B4B97BC24AA0A48003A974A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B97BB24AA0A48003A974A /* main.swift */; };
 		2B4B97C424AB078B003A974A /* SwiftGrandCentralDispatchExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B97C324AB078B003A974A /* SwiftGrandCentralDispatchExample.swift */; };
 		2B5CB5032465083500DB3850 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CB5022465083400DB3850 /* Test.swift */; };
@@ -52,6 +53,7 @@
 		2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
 		2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
 		2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeatures.swift; sourceTree = "<group>"; };
+		2B1019D324BB17EB004118E0 /* MethodDispatchExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDispatchExample.swift; sourceTree = "<group>"; };
 		2B4B97BB24AA0A48003A974A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2B4B97C324AB078B003A974A /* SwiftGrandCentralDispatchExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGrandCentralDispatchExample.swift; sourceTree = "<group>"; };
 		2B5CB5022465083400DB3850 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				2B655A9924A6D94100C13B5C /* SwiftTipsExample.swift */,
 				2B4B97BB24AA0A48003A974A /* main.swift */,
 				2B4B97C324AB078B003A974A /* SwiftGrandCentralDispatchExample.swift */,
+				2B1019D324BB17EB004118E0 /* MethodDispatchExample.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				2BB14B8D24A06710007AB489 /* MasonryViewController.swift in Sources */,
 				2B0D981224849E2B00673E67 /* SwiftClass.swift in Sources */,
 				2BCC3EBC2495FF1500E8B22C /*  GenericExample.swift in Sources */,
+				2B1019D424BB17EB004118E0 /* MethodDispatchExample.swift in Sources */,
 				2BCC35862490847B00E8B22C /* SubscriptExample.swift in Sources */,
 				2BCC3EBE2497460200E8B22C /* ARCExample.swift in Sources */,
 				2B4B97C424AB078B003A974A /* SwiftGrandCentralDispatchExample.swift in Sources */,

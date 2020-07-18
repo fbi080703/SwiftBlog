@@ -24,6 +24,7 @@ class MasonryViewController: UIViewController {
         //autoreleasepool {}
         masonryTest()
         snapTest()
+        
         //柯里化 (Currying)
         //button.setTarget(self, action: MasonryViewController.onButtonTap, controlEvent: .touchUpInside)
         //button.performActionForControlEvent(controlEvent: .touchUpInside)

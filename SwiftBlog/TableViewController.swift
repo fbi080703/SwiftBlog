@@ -55,6 +55,8 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     var descriptionText = String()
     var postDate = String()
     
+    static let kSomeConstantHeight: Float = 80.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

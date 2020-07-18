@@ -8,6 +8,8 @@
 
 import Foundation
 
+//https://docs.swift.org/swift-book/LanguageGuide/Properties.html
+
 //全局变量和局部变量
 //全局的常量或变量都是延迟计算的，跟延时加载存储属性相似，不同的地方在于，全局的常量或变量不需要标记 lazy 修饰符。
 //局部范围的常量和变量从不延迟计算。
@@ -67,16 +69,36 @@ struct SmallRectangle {
     }*/
 }
 
+//https://juejin.im/post/5df05060518825122030809e
+
+//1、必须使用属性@propertyWrapper进行定义。
+//2、它必须具有wrappedValue属性。
+
+/*
+ Property wrappers并非没有限制。 他们强加了许多限制：
+
+ 带有包装器的属性不能在子类中覆盖。
+ 具有包装器的属性不能是lazy，@NSCopying，@NSManaged，weak或unowned。
+ 具有包装器的属性不能具有自定义的set或get方法。
+ wrappedValue，init（wrappedValue :)和projectedValue必须具有与包装类型本身相同的访问控制级别
+ 不能在协议或扩展中声明带有包装器的属性。
+ */
+
 @propertyWrapper
 struct SmallNumber {
     private var maximum: Int
     private var number: Int
 
+//    var wrappedValue: Int {
+//        get { return number }
+//        set { number = min(newValue, maximum) }
+//    }
+    
     var wrappedValue: Int {
         get { return number }
         set { number = min(newValue, maximum) }
     }
-
+    
     init() {
         maximum = 12
         number = 0
@@ -151,6 +173,8 @@ enum SomeEnumeration {
     static var computedTypeProperty: Int {
         return 6
     }
+    
+    case small, large
 }
 class SomeClass {
     static var storedTypeProperty = "Some value."
