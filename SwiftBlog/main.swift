@@ -32,6 +32,7 @@ if #available(iOS 14.0, *) {
                       NSStringFromClass(MyApplication.self),
                       NSStringFromClass(AppDelegate.self))
 } else {
-    // Fallback on earlier versions
+    
+    UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, NSStringFromClass(AppDelegate.self))
 }
 

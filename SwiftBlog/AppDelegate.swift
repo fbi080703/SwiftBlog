@@ -18,7 +18,7 @@ struct Mountain {
 }
 
 //@UIApplicationMain
-@available(iOS 14.0, *)
+//@available(iOS 14.0, *)
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
@@ -34,12 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var gcd: SwiftGrandCentralDispatchExample?
     
     //
-    let logger = Logger(subsystem: "com.example.Fruta", category: "giftcards")
+    //let logger = Logger(subsystem: "com.example.Fruta", category: "giftcards")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         printName()
-        logger.log("com.example.Fruta")
+        //logger.log("com.example.Fruta")
         
         var m1 = Mountain(uuid: UUID.init(), name: "", height: 30)
         var m2 = m1
