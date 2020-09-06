@@ -48,6 +48,7 @@
 /* Begin PBXFileReference section */
 		157A4E7977D71D28B52AB26E /* Pods_SwiftBlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B058DD525022C6700D2F3B6 /* SwifURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifURL.swift; sourceTree = "<group>"; };
+		2B058DD92502370700D2F3B6 /* SwiftBlog.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftBlog.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B0D980F24827F6E00673E67 /* BuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderExample.swift; sourceTree = "<group>"; };
 		2B0D981124849E2B00673E67 /* SwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftClass.swift; sourceTree = "<group>"; };
 		2B0D981324849E5F00673E67 /* SwiftClassDynamicExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassDynamicExample.swift; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 				2BB14B8C24A06710007AB489 /* MasonryViewController.swift */,
 				2B655A9924A6D94100C13B5C /* SwiftTipsExample.swift */,
 				2B4B97BB24AA0A48003A974A /* main.swift */,
+				2B058DD92502370700D2F3B6 /* SwiftBlog.playground */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
