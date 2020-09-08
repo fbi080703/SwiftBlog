@@ -202,7 +202,7 @@ if let strNew = String(data: creatureJsonDataNew, encoding: .utf8) {
 }
 // 用JSONDecoder把JSON Data转回instance
 // 以下这句代码报错了！
-let decodedAnimalNew: Creature = try jsonDecoder.decode(Creature.self, from: creatureJsonDataNew)
+//let decodedAnimalNew: Creature = try jsonDecoder.decode(Creature.self, from: creatureJsonDataNew)
 
 
 // Swift无法使用type string来构造Type，因此对每个使用了多态的类簇，实现一个遵守此协议的enum，间接获取Type。
@@ -267,7 +267,7 @@ protocol Meta: Codable {
 //    typealias Element = Creature
 //
 //    static func metatype(for element: Creature) -> CreatureMetaType {
-//        return element.self
+//        return element.Type
 //    }
 //    // Raw Value需要与类名Type严格一致；case需要覆盖到类簇里的每一类型！
 //    case creature = "Creature"
@@ -299,3 +299,59 @@ protocol Meta: Codable {
 //let decodedMetaObjectNewss: MetaArray<CreatureMetaType> = try JSONDecoder().decode(MetaArray<CreatureMetaType>.self, from: creatureJsonData)
 //// 然后再取出其中Object，这个Object的类型是"Animal"
 //let decodedCreature = decodedMetaObjectNewss.object
+
+
+print(String.self)
+print(Animal.self)
+
+//NSStringFromClass(String.self) //ERROR
+//NSStringFromClass(NSString.self)  //PASS
+
+var someTuple = (top: 10, bottom: 12)
+someTuple.top
+
+class SomeBaseClass {
+    class func printClassName() {
+        print("SomeBaseClass")
+    }
+}
+class SomeSubClass: SomeBaseClass {
+    override class func printClassName() {
+        print("SomeSubClass")
+    }
+}
+let someInstance: SomeBaseClass = SomeSubClass()
+// The compile-time type of someInstance is SomeBaseClass,
+// and the runtime type of someInstance is SomeSubClass
+type(of: someInstance).printClassName()
+// Prints "SomeSubClass"
+
+class AnotherSubClass: SomeBaseClass {
+    let string: String
+    required init(string: String) {
+        self.string = string
+    }
+    override class func printClassName() {
+        print("AnotherSubClass")
+    }
+}
+let metatype: AnotherSubClass.Type = AnotherSubClass.self
+let anotherInstance = metatype.init(string: "some string")
+
+
+class Superclass {
+    func f() -> Self { return self }
+}
+let x = Superclass()
+print(type(of: x.f()))
+// Prints "Superclass"
+
+class Subclass: Superclass { }
+let y = Subclass()
+print(type(of: y.f()))
+// Prints "Subclass"
+
+let z: Superclass = Subclass()
+print(type(of: z.f()))
+// Prints "Subclass"
+//Writing Self.someStaticMember to access a member of the current type is the same as writing type(of: self).someStaticMember.
