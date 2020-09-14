@@ -8,6 +8,18 @@
 
 import Foundation
 
+//let mm = Planet.earth
+ 
+ //let mars = Planet[5]
+ //print(mars)
+ 
+/*let train = Train.init()
+train.defaultType = "dfddfd"
+print(train.defaultType)*/
+ 
+ //Point(x: 2.0, y: 2.0)
+ //let r = Rect.init(origin: ExtensionPoint(x: 0.0, y: 0.0), size: ExtensionSize(width: 5.0, height: 60.0))
+
 enum Planet: Int {
     case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
     static subscript(n: Int) -> Planet {

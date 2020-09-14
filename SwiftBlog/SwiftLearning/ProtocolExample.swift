@@ -39,6 +39,10 @@ protocol FullyNamed {
     var fullName: String { get }
 }
 
+//var example = PersonExample(fullName: "PersonExample")
+//example.fullName = "ExtensionPoint"
+//print(example.fullName)
+//
 
 struct PersonExample: FullyNamed {
     var fullName: String
@@ -226,6 +230,11 @@ class SnakesAndLadders: DiceGame {
         delegate?.gameDidEnd(self)
     }
 }
+
+//let tracker = DiceGameTracker()
+//let game = SnakesAndLadders()
+//game.delegate = tracker
+//game.play()
 
 //定义了 DiceGameTracker 类，它遵循了 DiceGameDelegate 协议
 

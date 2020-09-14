@@ -15,6 +15,19 @@ import Foundation
 //局部范围的常量和变量从不延迟计算。
 var globalProperty = "globalProperty"
 
+/**
+ 将 totalSteps 的值设置为 200
+ 增加了 200 步
+ 将 totalSteps 的值设置为 360
+ 增加了 160 步
+ 将 totalSteps 的值设置为 896
+ 增加了 536 步
+ */
+//let stepCounter = StepCounter()
+//stepCounter.totalSteps = 200
+
+//stepCounter.totalSteps = 360
+//stepCounter.totalSteps = 896
 class StepCounter {
     
     //跟实例的存储型属性不同，必须给存储型类型属性指定默认值，因为类型本身没有构造器，也就无法在初始化过程中使用构造器给类型属性赋值。
@@ -49,6 +62,17 @@ struct TwelveOrLess {
         set { number = min(newValue, 12) }
     }
 }
+
+
+//var rectangle = SmallRectangle()
+//print(rectangle.height)
+//rectangle.height = 10
+//print(rectangle.height)
+//rectangle.height = 24
+//print(rectangle.height)
+
+//var zeroRectangle = ZeroRectangle()
+//print(zeroRectangle.height, zeroRectangle.width)
 
 struct SmallRectangle {
     //one

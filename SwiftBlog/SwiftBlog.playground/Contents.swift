@@ -355,3 +355,49 @@ let z: Superclass = Subclass()
 print(type(of: z.f()))
 // Prints "Subclass"
 //Writing Self.someStaticMember to access a member of the current type is the same as writing type(of: self).someStaticMember.
+
+
+var emptyDict: [String: String] = [:]
+emptyDict["title"] = ""
+emptyDict["ddd"] = nil
+//emptyDict = nil
+
+
+enum Constant {
+  enum UI {
+    static let animationDuration: TimeInterval = 0.3
+    static let lowAlpha: CGFloat = 0.2
+  }
+  enum Analytics {
+    static let apiKey = "13511-5234-5234-59234"
+  }
+}
+
+class User: NSObject {
+
+    let userName: String
+    var isSuperUser: Bool = false
+    let someDetails: [String]?
+
+    init?(dictionary: Dictionary<String, Any>) {
+        if let value: String = dictionary["user_name"] as? String {
+            userName = value
+        }
+        else {
+           return nil
+        }
+
+        if let value: Bool = dictionary["super_user"] as? Bool {
+            isSuperUser = value
+        }
+
+        someDetails = dictionary["some_details"] as? Array
+
+        super.init()
+    }
+}
+
+//let u = User.init(dictionary: emptyDict!)
+
+
+

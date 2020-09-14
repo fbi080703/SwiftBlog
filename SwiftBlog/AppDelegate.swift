@@ -38,31 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        printName()
-        //logger.log("com.example.Fruta")
-        
-        var m1 = Mountain(uuid: UUID.init(), name: "", height: 30)
-        var m2 = m1
-        print(NSString(format: "%p", addressOf(&m1)))
-        print(NSString(format: "%p", addressOf(&m2)))
-        
-        //var initalArray = [1, 2, 3]
-        //let pointer: UnsafeMutableRawPointer = UnsafeMutablePointer(mutating: initalArray)
-        
-        //CFArrayGetValueAtIndex
-        //vImage_Buffer(data: T##UnsafeMutableRawPointer!, height: <#T##vImagePixelCount#>, width: <#T##vImagePixelCount#>, rowBytes: <#T##Int#>)
-
-        //var a: [Float16] = [34,43,56]
-        //floatMethod(&a)
-        
-        //print(NSString(format: "%p", addressOf(&m1.name)))
-        //print(NSString(format: "%p", addressOf(&m2.name)))
-        //print(NSString(format: "%p", addressOf(&m1.height)))
-        //print(NSString(format: "%p", addressOf(&m2.height)))
-        
         // builderExample()
         // SwiftClassDynamicExample().dynamicTest()
-        
+    
         // let throttledNetworkManager = ThrottledNetworkManager()
         // throttledNetworkManager.printDebugData()
         
@@ -74,18 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
         }
         
-        //let x = "Started a task"
-        //logger.debug("An unsigned integer \(x, privacy: .public)")
-        //logger.log("Started a task")
-        
         let gcdExample = SwiftGrandCentralDispatchExample()
         gcdExample.grandCentralDispatchTest()
-        
-        //var d : Int32 = 9
-        var dd : [CInt] = [34,45,444]
-        
-        //testMethod(&d)
-        testMethod(&dd)
         
         let methodDispatchExample = MethodDispatchExample()
         methodDispatchExample.example()
@@ -97,66 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        //example.takesAClosure()
        //example.captureValue()
         
-        /**
-         将 totalSteps 的值设置为 200
-         增加了 200 步
-         将 totalSteps 的值设置为 360
-         增加了 160 步
-         将 totalSteps 的值设置为 896
-         增加了 536 步
-         */
-        //let stepCounter = StepCounter()
-        //stepCounter.totalSteps = 200
-        
-//        stepCounter.totalSteps = 360
-//        stepCounter.totalSteps = 896
-        
-        
-//        var rectangle = SmallRectangle()
-//        print(rectangle.height)
-//        rectangle.height = 10
-//        print(rectangle.height)
-//        rectangle.height = 24
-//        print(rectangle.height)
-        
-        //var zeroRectangle = ZeroRectangle()
-        //print(zeroRectangle.height, zeroRectangle.width)
-        
-        //let mm = Planet.earth
-        
-        //let mars = Planet[5]
-        //print(mars)
-        
-       /*let train = Train.init()
-       train.defaultType = "dfddfd"
-       print(train.defaultType)*/
-        
-        //Point(x: 2.0, y: 2.0)
-        //let r = Rect.init(origin: ExtensionPoint(x: 0.0, y: 0.0), size: ExtensionSize(width: 5.0, height: 60.0))
-        
-//         var example = PersonExample(fullName: "PersonExample")
-//        example.fullName = "ExtensionPoint"
-//        print(example.fullName)
-        
-//        let tracker = DiceGameTracker()
-//        let game = SnakesAndLadders()
-//        game.delegate = tracker
-//        game.play()
-        
-        //var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
-        //print(paragraph?.asHTML())
-        
         /*内存安全*/
-        
-        //var oscar = Player(name: "Oscar", health: 10, energy: 10)
-        //var maria = Player(name: "Maria", health: 5, energy: 10)
-        //oscar.shareHealth(with: &maria)  // 正常
-        
-        //Inout arguments are not allowed to alias each other
-        //Overlapping accesses to 'oscar', but modification requires exclusive access; consider copying to a local variable
-        //oscar.shareHealth(with: &oscar) //内存访问冲突
-        /*内存安全*/
-        
         //let font = UIFont.systemFont(ofSize: 10.0)
         //let label1 = Label(text:"Hi", font:font)  //栈区包含了存储在堆区的指针
         //var label2 = label1 //label2产生新的指针，和label1一样指向同样的string和font地址
@@ -166,45 +75,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //label2.font = another
         //label2.font = UIFont.systemFont(ofSize: 12.0)
         
-        
-//        let obj = ChildClass()
-//        obj.method2()
-        
-        
-        //let classIns = Base()
-        //(classIns as AnyObject).perform?(NSSelectorFromString("test"))
-        //
-        //let subClassIns = Sub()
-        //(subClassIns as AnyObject).perform?(NSSelectorFromString("test"))
-        
-        //var sub:LoudPerson = LoudPerson()
-        //sub.sayHi()  //sub
-        
-        //协议的扩展内实现的方法，无法被遵守类的子类重载
-        //var sub:ParentPerson = LoudPerson()
-        //sub.sayHi() //hello
-        
-        //let subClass : MyClass = SubClass()
-        //subClass.extensionMethod()
-        
-        print(B().a())  // 0
-        print(C().a()) // 1
-        print((C() as A).a()) // 0 # We thought return 1.
-
-        // Success cases.
-        print(D().a()) // 1
-        print((D() as A).a()) // 1
-        print(E().a()) // 2
-        print((E() as A).a()) // 2
-        
         #if swift(>=5.2)
            print("Running Swift 5.0 or later")
         #else
            print("Running old Swift")
         #endif
+        
+        //Pattern Matching
+        PatternMatchingExample.testStaticExample()
+        
         return true
     }
     
+    //var d : Int32 = 9
+    //var dd : [CInt] = [34,45,444]
+    //testMethod(&dd)
     func testMethod(_ ints: UnsafePointer<[CInt]>) {
         print(ints.pointee)
     }
@@ -240,6 +125,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var num2 = num1
     //print(NSString(format: "%p", address(&num1))) // -> "0x10f1fd480\n"
     //print(NSString(format: "%p", address(&num2))) // -> "0x10f1fd488\n"
+    
+    //var m1 = Mountain(uuid: UUID.init(), name: "", height: 30)
+    //var m2 = m1
+    //print(NSString(format: "%p", addressOf(&m1)))
+    //print(NSString(format: "%p", addressOf(&m2)))
+    
+    //var initalArray = [1, 2, 3]
+    //let pointer: UnsafeMutableRawPointer = UnsafeMutablePointer(mutating: initalArray)
+    
+    //CFArrayGetValueAtIndex
+    //vImage_Buffer(data: T##UnsafeMutableRawPointer!, height: <#T##vImagePixelCount#>, width: <#T##vImagePixelCount#>, rowBytes: <#T##Int#>)
+
+    //var a: [Float16] = [34,43,56]
+    //floatMethod(&a)
+    
+    //print(NSString(format: "%p", addressOf(&m1.name)))
+    //print(NSString(format: "%p", addressOf(&m2.name)))
+    //print(NSString(format: "%p", addressOf(&m1.height)))
+    //print(NSString(format: "%p", addressOf(&m2.height)))
+    
     ///
     func addressOf(_ o: UnsafeRawPointer) -> String {
         let addr = Int(bitPattern: o)
@@ -418,6 +323,16 @@ extension String {
 //任何情况下，对于元组元素的写访问都需要对整个元组发起写访问。这意味着对于 playerInfomation 发起的两个写访问重叠了，造成冲突
 var playerInformation = (health: 10, energy: 20)
 
+
+/*内存安全*/
+//var oscar = Player(name: "Oscar", health: 10, energy: 10)
+//var maria = Player(name: "Maria", health: 5, energy: 10)
+//oscar.shareHealth(with: &maria)  // 正常
+
+//Inout arguments are not allowed to alias each other
+//Overlapping accesses to 'oscar', but modification requires exclusive access; consider copying to a local variable
+//oscar.shareHealth(with: &oscar) //内存访问冲突
+
 struct Player {
     var name: String
     var health: Int
@@ -457,6 +372,22 @@ extension Greetable {
     }
 }
 
+//let classIns = Base()
+//(classIns as AnyObject).perform?(NSSelectorFromString("test"))
+//
+//let subClassIns = Sub()
+//(subClassIns as AnyObject).perform?(NSSelectorFromString("test"))
+
+//var sub:LoudPerson = LoudPerson()
+//sub.sayHi()  //sub
+
+//协议的扩展内实现的方法，无法被遵守类的子类重载
+//var sub:ParentPerson = LoudPerson()
+//sub.sayHi() //hello
+
+//let subClass : MyClass = SubClass()
+//subClass.extensionMethod()
+
 class ParentPerson : Greetable {
 }
 class LoudPerson:ParentPerson {
@@ -471,6 +402,10 @@ class ParentClass {
         print("this is ParentClass")
     }
 }
+
+//let obj = ChildClass()
+//obj.method2()
+
 class ChildClass: ParentClass {
     override func method2() {
         print("this is ChildClass")
@@ -485,6 +420,16 @@ class ChildClass: ParentClass {
     }
 }*/
 
+
+//print(B().a())  // 0
+//print(C().a()) // 1
+//print((C() as A).a()) // 0 # We thought return 1.
+//
+//// Success cases.
+//print(D().a()) // 1
+//print((D() as A).a()) // 1
+//print(E().a()) // 2
+//print((E() as A).a()) // 2
 
 // Defined protocol.
 protocol A {

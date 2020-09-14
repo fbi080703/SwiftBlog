@@ -88,6 +88,8 @@ class CityARC {
     }
 }
 
+//var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+//print(paragraph?.asHTML())
 
 //闭包的循环强引用
 
