@@ -28,7 +28,7 @@ extension Direction: CustomStringConvertible {
   }
 }
 
-public enum Media {
+enum Media {
   case book(title: String, author: String, year: Int)
   case movie(title: String, director: String, year: Int)
   case website(url: NSURL, title: String)

@@ -6,4 +6,5 @@ use_frameworks!
 target 'SwiftBlog' do
     pod 'SnapKit', '~> 5.0.0'
     pod 'Masonry'
+    pod 'Swinject'
 end
