@@ -14,6 +14,9 @@
 		2B0D98302485FEDB00673E67 /* PureSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */; };
 		2B0D9832248602A800673E67 /* SemiSingletonDesignPatterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */; };
 		2B0D9834248635B000673E67 /* SwiftNewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */; };
+		2B47CED9251B2BDD005CC38D /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47CED8251B2BDD005CC38D /* DependencyInjection.swift */; };
+		2B47CEDB251B2BF6005CC38D /* InjectionPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47CEDA251B2BF6005CC38D /* InjectionPatterns.swift */; };
+		2B47CEDD251B3FEB005CC38D /* CircularDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47CEDC251B3FEB005CC38D /* CircularDependencies.swift */; };
 		2B4B97BC24AA0A48003A974A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B97BB24AA0A48003A974A /* main.swift */; };
 		2B4E27D6251096FD005D1430 /* PatternMatchingPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E27D5251096FD005D1430 /* PatternMatchingPartTwo.swift */; };
 		2B5CB5032465083500DB3850 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CB5022465083400DB3850 /* Test.swift */; };
@@ -23,7 +26,6 @@
 		2B8499972487C52500BEB1AE /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8499962487C52500BEB1AE /* Runtime.swift */; };
 		2B9F141E24892A3100768E6D /* AdapterPatternExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F141D24892A3100768E6D /* AdapterPatternExample.swift */; };
 		2BB14B8D24A06710007AB489 /* MasonryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB14B8C24A06710007AB489 /* MasonryViewController.swift */; };
-		2BC2B24A25130FFD0000434C /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2B24925130FFD0000434C /* DependencyInjection.swift */; };
 		2BFAA49B24C7F84C0070A11C /* MethodDispatchExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA48C24C7F84C0070A11C /* MethodDispatchExample.swift */; };
 		2BFAA49C24C7F84C0070A11C /* SwiftDiscardableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA48D24C7F84C0070A11C /* SwiftDiscardableResult.swift */; };
 		2BFAA49D24C7F84C0070A11C /* ClosureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA48E24C7F84C0070A11C /* ClosureExample.swift */; };
@@ -59,6 +61,9 @@
 		2B0D982F2485FEDB00673E67 /* PureSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
 		2B0D9831248602A800673E67 /* SemiSingletonDesignPatterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiSingletonDesignPatterExample.swift; sourceTree = "<group>"; };
 		2B0D9833248635B000673E67 /* SwiftNewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeatures.swift; sourceTree = "<group>"; };
+		2B47CED8251B2BDD005CC38D /* DependencyInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		2B47CEDA251B2BF6005CC38D /* InjectionPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionPatterns.swift; sourceTree = "<group>"; };
+		2B47CEDC251B3FEB005CC38D /* CircularDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDependencies.swift; sourceTree = "<group>"; };
 		2B4B97BB24AA0A48003A974A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2B4E27D5251096FD005D1430 /* PatternMatchingPartTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternMatchingPartTwo.swift; sourceTree = "<group>"; };
 		2B5CB5022465083400DB3850 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -68,7 +73,6 @@
 		2B8499962487C52500BEB1AE /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 		2B9F141D24892A3100768E6D /* AdapterPatternExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterPatternExample.swift; sourceTree = "<group>"; };
 		2BB14B8C24A06710007AB489 /* MasonryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonryViewController.swift; sourceTree = "<group>"; };
-		2BC2B24925130FFD0000434C /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		2BFAA48C24C7F84C0070A11C /* MethodDispatchExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodDispatchExample.swift; sourceTree = "<group>"; };
 		2BFAA48D24C7F84C0070A11C /* SwiftDiscardableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDiscardableResult.swift; sourceTree = "<group>"; };
 		2BFAA48E24C7F84C0070A11C /* ClosureExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureExample.swift; sourceTree = "<group>"; };
@@ -109,6 +113,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B47CED7251B2BDD005CC38D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2B47CED8251B2BDD005CC38D /* DependencyInjection.swift */,
+				2B47CEDA251B2BF6005CC38D /* InjectionPatterns.swift */,
+				2B47CEDC251B3FEB005CC38D /* CircularDependencies.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		2B6A128F250B4C96007B3026 /* PatternMatching */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +200,7 @@
 				2BFAA48B24C7F84C0070A11C /* SwiftLearning */,
 				AE17276119B8E32D00565259 /* TableViewController.swift */,
 				2B0D981124849E2B00673E67 /* SwiftClass.swift */,
+				2B47CED7251B2BDD005CC38D /* DI */,
 				AE17278A19B8F48100565259 /* WebviewPost.swift */,
 				AE17276319B8E32D00565259 /* Main.storyboard */,
 				AE17278C19B8F5C700565259 /* NavigationBarBackground.png */,
@@ -202,7 +217,6 @@
 				2B655A9924A6D94100C13B5C /* SwiftTipsExample.swift */,
 				2B4B97BB24AA0A48003A974A /* main.swift */,
 				2B058DD92502370700D2F3B6 /* SwiftBlog.playground */,
-				2BC2B24925130FFD0000434C /* DependencyInjection.swift */,
 			);
 			path = SwiftBlog;
 			sourceTree = "<group>";
@@ -354,7 +368,7 @@
 				2B0D98302485FEDB00673E67 /* PureSingletonDesignPatterExample.swift in Sources */,
 				2BFAA49D24C7F84C0070A11C /* ClosureExample.swift in Sources */,
 				2BFAA4A824C7F84C0070A11C /* ConstructExample.swift in Sources */,
-				2BC2B24A25130FFD0000434C /* DependencyInjection.swift in Sources */,
+				2B47CED9251B2BDD005CC38D /* DependencyInjection.swift in Sources */,
 				2BFAA4A024C7F84C0070A11C /* ExtensionExample.swift in Sources */,
 				2B4E27D6251096FD005D1430 /* PatternMatchingPartTwo.swift in Sources */,
 				2BFAA4A924C7F84C0070A11C /*  GenericExample.swift in Sources */,
@@ -368,10 +382,12 @@
 				2B5CB5032465083500DB3850 /* Test.swift in Sources */,
 				AE17276019B8E32D00565259 /* AppDelegate.swift in Sources */,
 				2BFAA4A324C7F84C0070A11C /* PropertyExample.swift in Sources */,
+				2B47CEDB251B2BF6005CC38D /* InjectionPatterns.swift in Sources */,
 				2B058DD625022C6700D2F3B6 /* SwifURL.swift in Sources */,
 				2BFAA4A224C7F84C0070A11C /* InheritExample.swift in Sources */,
 				2B6A1291250B4CEA007B3026 /* PatternMatchingPartOne.swift in Sources */,
 				2B655A9A24A6D94100C13B5C /* SwiftTipsExample.swift in Sources */,
+				2B47CEDD251B3FEB005CC38D /* CircularDependencies.swift in Sources */,
 				2B0D981424849E5F00673E67 /* SwiftClassDynamicExample.swift in Sources */,
 				AE17278B19B8F48100565259 /* WebviewPost.swift in Sources */,
 				2B9F141E24892A3100768E6D /* AdapterPatternExample.swift in Sources */,

@@ -85,7 +85,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PatternMatchingExample.testStaticExample()
         
         //Dependency Injection 依赖反转
-        DependencyInjection.example()
+        DIContainer.example()
+        InjectionPatterns.example()
         
         return true
     }
